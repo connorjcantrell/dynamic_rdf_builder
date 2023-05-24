@@ -45,3 +45,5 @@ ex:BaseEntity a ex:Entity ;
     ex:hasRelation ex:Component1 .
     ex:Component1 a ex:Component .
 ```
+
+In the output, you can see how BaseEntity and Component1 replace {0} and {1} in the ttx files, respectively, leading to a unique RDF data instance. Such dynamic generation of RDF data instances can be used for effectively testing against shape constraints or other RDF data model requirements.
