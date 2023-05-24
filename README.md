@@ -26,7 +26,7 @@ from dynamic_rdf_builder import DynamicRDFBuilder
 rdf_builder = DynamicRDFBuilder('BaseEntity', 'thing.ttx')
 
 # Add additional instances from another ttx file
-rdf_builder.add('with_component.ttx', ['Entity2', 'Entity3'])
+rdf_builder.add('with_component.ttx', ['Component1'])
 
 # Build the RDF graph (for checking validity)
 rdf_graph = rdf_builder.build_graph()
