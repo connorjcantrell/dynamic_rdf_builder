@@ -32,7 +32,16 @@ rdf_builder.add('with_component.ttx', ['Component1'])
 rdf_graph = rdf_builder.build_graph()
 
 # Serialize the RDF graph into a string (default format is 'turtle')
-turtle_data = rdf_builder.serialize()
+print(rdf_builder.serialize())
+```
+
+Output:
+```
+@prefix ex: <http://example.org/> .
+
+ex:BaseEntity a ex:Entity ;
+    ex:hasRelation ex:Component1 .
+    ex:Component1 a ex:Component .
 ```
 
 ## Module Details
