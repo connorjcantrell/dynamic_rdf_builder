@@ -2,15 +2,17 @@
 This Python module allows users to construct RDF (Resource Description Framework) Turtle files dynamically. It takes a base `ttx` template file, which must contain the prefixes, and optionally additional ttx template files. It replaces placeholders in these template files with actual entity names to build a valid RDF Turtle file.
 
 ### What is a `ttx` file?
-A ttx file is a Turtle (ttl) RDF template file with placeholders for entity names. These placeholders are written as {index}, where index is an integer starting from 0. For instance, a base ttx file might look something like this:
+A ttx file is a Turtle (ttl) RDF template file with placeholders for entity names. These placeholders are written as {index}, where index is an integer starting from 0. For instance, a base ttx file (e.g. `thing.ttx`) might look something like this:
 ```ttl
 @prefix ex: <http://example.org/> .
+
 ex:{0} a ex:Entity .
 ```
 
-and an additional `.ttx` file might look like this:
+and an additional ttx file (e.g. `with_component.ttx`) might look like this:
 ```
 ex:{0} ex:hasRelation ex:{1} .
+ex:{1} a ex:Component .
 ```
 
 In the above examples, {0} and {1} are placeholders that will be replaced by actual entity names.
